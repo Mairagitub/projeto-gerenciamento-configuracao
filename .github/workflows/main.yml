@@ -1,0 +1,22 @@
+name: Projeto - CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Verificar arquivos do projeto
+        run: |
+          echo "Projeto de Gerenciamento de Configuração"
+          ls -la
